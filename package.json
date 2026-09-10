@@ -1,0 +1,49 @@
+{
+  "name": "openai-agents-api-v0-clone",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env.local --import tsx scripts/dev.ts",
+    "build": "next build",
+    "vercel-build": "node --import tsx scripts/migrate.ts && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "node --env-file=.env.local --import tsx scripts/migrate.ts",
+    "agent:create": "node --env-file=.env.local --import tsx scripts/create-agent.ts",
+    "test:live": "node --env-file=.env.local --import tsx scripts/smoke.ts",
+    "test:deployed": "node --env-file=.env.local --import tsx scripts/check-deployment.ts"
+  },
+  "dependencies": {
+    "@vercel/queue": "0.5.1",
+    "@vercel/sandbox": "3.2.1",
+    "lucide-react": "^1.42.0",
+    "next": "16.3.4",
+    "openai": "7.15.0",
+    "pg": "^8.23.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-markdown": "^10.1.0",
+    "undici": "7.29.1",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24.13.3",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.13",
+    "typescript": "^5",
+    "vitest": "^5.0.0"
+  },
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": "24.x"
+  }
+}

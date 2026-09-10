@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "app/api/queues/jobs/route.ts": { "experimentalTriggers": [{ "type": "queue/v2beta", "topic": "studio-jobs" }] },
+    "app/api/queues/provision/route.ts": { "experimentalTriggers": [{ "type": "queue/v2beta", "topic": "studio-provision" }] }
+  },
+  "crons": [{ "path": "/api/cron", "schedule": "*/5 * * * *" }]
+}

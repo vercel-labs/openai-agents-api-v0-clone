@@ -1,0 +1,8 @@
+.env*
+.smoke-project.json
+.deployed-smoke.json
+.git
+.next
+node_modules
+.deepsec/
+*.tsbuildinfo
