@@ -6,7 +6,7 @@ export const starter: Record<string, string> = {
       private: true,
       scripts: { dev: "next dev --hostname 0.0.0.0", build: "next build" },
       dependencies: {
-        next: "16.3.4",
+        next: "16.4.1",
         react: "19.2.8",
         "react-dom": "19.2.8",
         "lucide-react": "1.42.0",
