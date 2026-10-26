@@ -19,14 +19,14 @@
     "@vercel/queue": "0.5.1",
     "@vercel/sandbox": "3.2.1",
     "lucide-react": "^1.42.0",
-    "next": "16.3.4",
+    "next": "16.4.1",
     "openai": "7.15.0",
     "pg": "^8.23.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-markdown": "^10.1.0",
-    "undici": "7.29.1",
-    "zod": "^4.5.4"
+    "undici": "7.30.1",
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.8",
@@ -36,14 +36,20 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.4",
+    "eslint-config-next": "16.4.1",
     "tailwindcss": "^4",
     "tsx": "^4.23.13",
     "typescript": "^5",
-    "vitest": "^5.0.0"
+    "vitest": "5.0.3"
   },
   "packageManager": "pnpm@10.34.5",
   "engines": {
     "node": "24.x"
+  },
+  "pnpm": {
+    "overrides": {
+      "@vercel/cli-config>zod": "4.6.7",
+      "vite@8.2.2": "8.2.4"
+    }
   }
 }
